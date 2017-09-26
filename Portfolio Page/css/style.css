@@ -1,0 +1,262 @@
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.navbar-default .navbar-brand {
+  color: #ffffff;
+}
+
+.navbar-default {
+  background-color: #1E3D4C;
+  padding-top: 13px;
+  font-size: 1.2em;
+  border-color: #142933;
+  box-shadow: 0px 5px 10px #142933;
+}
+
+nav.navbar.shrink {
+  min-height: 35px;
+}
+
+nav.navbar {
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+
+/* title */
+
+.navbar-brand {
+  float: left;
+  height: 50px;
+  padding: 15px 15px;
+  font-size: 1.2em;
+  line-height: 20px;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #3EA287;
+}
+
+
+/* link */
+
+.navbar-default .navbar-nav > li > a {
+  color: #ffffff;
+  font-size: 1.2em;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #3EA287;
+}
+
+.navbar {
+  min-height: 80px;
+}
+
+.jumbotron {
+  min-height: 500px;
+  background: url("http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/green_dust_scratch.png");
+  background-attachment: fixed;
+  margin-bottom: 0px;
+}
+
+#top-section {
+  margin-top: 60px;
+  height: 100vh;
+  background-color: #3EA287;
+  padding-bottom: 100px;
+}
+
+#portfolio-avatar {
+  padding-top: 15%;
+  padding-left: 40px;
+}
+
+.jumbotron-content1 {
+  padding-top: 5%;
+  font-size: 200%;
+  font-weight: bold;
+  color: #27564A;
+}
+
+#Portfolio-Section {
+  padding-top: 10px;
+  background: none;
+  font-weight: bold;
+  padding-bottom: 10%;
+  background-color: #1E3D4C;
+  color: white;
+}
+
+.portfolio-item {
+  margin-top: 10px;
+}
+
+#contact-section {
+  min-height: 650px;
+background: url("http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/green_dust_scratch.png");
+  background-attachment: fixed;
+  margin-bottom: 0px;
+  padding-bottom: 5%;
+}
+
+.nav-tabs.nav-justified>li>a {
+  color: #27564A;
+  font-weight: bold;
+  font-size: 120%;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+  background-color: #1E3D4C;
+  color: white;
+  font-weight: bold;
+}
+
+#tab-content {
+  padding-top: 20%;
+}
+
+.btn {
+  color: white;
+  background-color: #1E3D4C;
+  font-weight: bold;
+}
+
+.form-group {
+  font-weight: bold;
+}
+
+#Address {
+  padding-top: 5%;
+  font-weight: bold;
+  color: #1E3D4C;
+}
+
+#Footer-Section {
+  padding-top: 50px;
+  background-color: #1E3D4C;
+  min-height: 200px;
+  color: white;
+  font-weight: bold;
+}
+
+.social-icons {
+  padding-top: 50px;
+}
+
+footer>div>a {
+  padding-right: 15px;
+}
+
+footer>div>a:nth-child(1) {
+  padding-right: 0px;
+  padding-left: 15px;
+}
+
+i {
+  color: white;
+}
+
+.fa:hover {
+  color: lime;
+}
+
+#rights-section {
+  padding-top: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  padding-bottom: 50px;
+}
+
+.modal-content {
+  background-color: #1E3D4C;
+  color: white;
+}
+
+button.btn:hover {
+  color: #1E3D4C;
+  background-color: lime;
+}
+
+button.btn:focus {
+  color: #1E3D4C;
+  background-color: lime;
+}
+
+@media (max-width:767px) {
+  #portfolio-avatar {
+    padding-left: 0px;
+  }
+  #portfolioModal .modal-body p {
+    padding-top: 0px;
+  }
+  #portfolioModal .modal-footer {
+    padding-top: 0px;
+  }
+}
+
+#portfolioModal .modal-dialog {
+  width: 98%;
+  height: 92%;
+  padding: 0;
+}
+
+#portfolioModal .modal-content {
+  height: 99%;
+}
+
+#portfolioModal .modal-body {
+  height: 70%;
+}
+
+#portfolioModal .modal-body p {
+  font-weight: bold;
+  font-size: 20px;
+  padding-top: 150px;
+}
+
+#portfolioModal .modal-footer {
+  padding-top: 25px;
+}
+
+
+/*For hover effect on images in portfolio section*/
+
+#Portfolio-Section * {
+  z-index: 2;
+}
+
+#Portfolio-Section .portfolio-item .portfolio-link .caption {
+  background: rgba(24, 188, 156, 0.9);
+  width: 92.5%;
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+  transition: all ease 0.5s;
+  -webkit-transition: all ease 0.5s;
+  -moz-transition: all ease 0.5s;
+}
+
+#Portfolio-Section .portfolio-item .portfolio-link .caption:hover {
+  opacity: 1;
+}
+
+#Portfolio-Section .portfolio-item .portfolio-link .caption .caption-content {
+  position: absolute;
+  width: 100%;
+  height: 20px;
+  font-size: 20px;
+  text-align: center;
+  top: 50%;
+  margin-top: -12px;
+  color: white;
+  opacity: 1
+}

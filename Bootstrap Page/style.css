@@ -1,0 +1,12 @@
+body{
+    margin: 0;
+}
+.jumbotron{
+    background-image:url("image/farzad-nazifi-71686.jpg");
+    background-size: cover;
+    margin-top: -20px;
+    height: 600px;
+    text-align: center;
+    padding-top: 180px;
+    color: #fff;
+}

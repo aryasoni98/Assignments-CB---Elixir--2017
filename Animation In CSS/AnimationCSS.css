@@ -1,0 +1,54 @@
+i{
+    position:absolute;
+    color:#0064ff;
+}
+.fa-5x{
+    font-size: 13em;
+}
+#loader{
+    animation: bike 4.5s linear infinite;
+}
+@keyframes bike {
+    0%   {top: 45vh; left: 0%;opacity:0.1;}
+    10%   {top: 50vh; left: 10%;opacity:0.5;}
+    20%   {top: 45vh; left: 20%;opacity:1;}
+    30%   {top: 50vh; left: 30%;opacity:1;}
+    40%   {top: 45vh; left: 40%;opacity:1;}
+    50%   {top: 50vh; left: 50%;opacity:1;}
+    60%   {top: 45vh; left: 60%;opacity:1;}
+    70%   {top: 50vh; left: 70%;opacity:1;}
+    80%   {top: 45vh; left: 80%;opacity:1;}
+    90%   {top: 50vh; left: 90%;opacity:0.5;}
+    100%   {top: 45vh; left: 100%;opacity:0.1;}
+}
+html, body, .container{
+    width: 100%;
+    height: 100%;
+    min-width: 500px;
+    min-height: 500px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.container{
+    background-color: 001dff;
+    background: linear-gradient(to bottom, #007ced 1%,#cce7ff 100%);
+}
+#cloud-intro{
+    position: relative;
+    height: 100%;
+    background: url(https://static.radulescu.me/examples/clouds/clouds1000.png);
+    background: url(https://static.radulescu.me/examples/clouds/clouds1000.png) 0 200px,
+    url(https://static.radulescu.me/examples/clouds/clouds1200_1.png) 0 300px,
+    url(https://static.radulescu.me/examples/clouds/clouds1000_blur3.png) 100px 250px;
+    animation: wind 20s linear infinite;
+}
+@keyframes wind{
+    0% {
+        background-position: 0 200px, 0 300px, 100px 250px;
+    }
+    100% {
+        background-position: 1000px 200px, 1200px 300px, 1100px 250px;
+    }
+
+}
