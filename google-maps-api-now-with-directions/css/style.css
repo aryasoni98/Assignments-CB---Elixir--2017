@@ -1,0 +1,271 @@
+#nav-toggle {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  z-index: 9999;
+}
+
+#nav-toggle {
+  cursor: pointer;
+  padding: 10px 35px 16px 0px;
+}
+
+#nav-toggle span,
+#nav-toggle span:before,
+#nav-toggle span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 5px;
+  width: 35px;
+  background: #212121;
+  position: absolute;
+  display: block;
+  content: '';
+}
+
+#nav-toggle span:before {
+  top: -10px;
+}
+
+#nav-toggle span:after {
+  bottom: -10px;
+}
+
+#nav-toggle span,
+#nav-toggle span:before,
+#nav-toggle span:after {
+  transition: all 500ms ease-in-out;
+}
+
+#nav-toggle.active span {
+  background-color: transparent;
+}
+
+#nav-toggle.active span:before,
+#nav-toggle.active span:after {
+  top: 0;
+  background: white;
+}
+
+#nav-toggle.active span:before {
+  transform: rotate(45deg);
+}
+
+#nav-toggle.active span:after {
+  transform: rotate(-45deg);
+}
+
+#searchDD {
+  width: 650px;
+  height: 100vh;
+  background-color: rgba(1, 1, 1, .8);
+  position: absolute;
+  z-index: 999;
+}
+
+#links::-webkit-scrollbar {
+  width: 0 !important
+}
+
+.input-group {
+  padding-top: 5px;
+}
+
+.carousel-nav
+{
+  float: left;
+  font-size: 20px!important;
+  width: 29px;
+  color: black;
+  height: 37px;
+  line-height: 40px !important;
+  background-color: lightgray;
+  padding-left:8px!important;
+}
+
+
+.types {
+  width: 20%;
+  height: inherit;
+  background-color: lightgray;
+  float: left;
+  color: black;
+  font-family: Oswald;
+  font-size: 20px;
+  text-align: -webkit-center;
+  line-height: 35px;
+  border: 1px solid #CCC;
+  box-shadow: 0 0 5px -1px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.activeType {
+  color: #2161a1;
+  box-shadow: 0 0 5px -1px rgba(0, 0, 0, 0.6);
+}
+
+
+.thePerfectTeal {
+  background-color: #214444;
+}
+
+a.generalText:hover {
+  color: cyan;
+}
+
+button.thePerfectTeal:hover {
+  color: white;
+  background-color: #416464;
+}
+
+.divider {
+  width: 90%;
+  margin: 20px auto 30px auto;
+  background-color: white;
+  height: 1px;
+}
+
+#links {
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+  width: 100%;
+  height: 72%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#mapPanel {
+  background-color: #212121;
+  width: 100%;
+  height: 100%;
+  float: right;
+}
+
+.hourList {
+  color: white;
+  margin: 0;
+  position: relative;
+  padding-left: 0px;
+  bottom: 10px;
+  left: 20%;
+  width: 100%;
+  float: left;
+  top: 10px;
+}
+
+.noHours {
+  color: white;
+  margin: 0 auto;
+  position: relative;
+  padding-left: 0px;
+  bottom: 10px;
+  width: 150px;
+  top: 60px;
+}
+
+.loadText {
+  margin: auto;
+  width: 180px;
+  position: relative;
+  top: 16%;
+  color: lightgray;
+}
+
+.loadContainer {
+  width: 80%;
+  height: 75%;
+  margin: auto;
+  position: relative;
+  border-radius: 50px;
+  top: 10%;
+}
+
+.loadClass {
+  width: 100%;
+  height: 75px;
+  background-color: rgba(21, 21, 21, .7);
+  z-index: 1001;
+  padding: 0;
+  border: none;
+}
+
+.location {
+  color: white;
+  padding: 5px;
+  margin-bottom: 0;
+}
+
+.expando {
+  width: 100%;
+  height: 145px;
+  display: none;
+  background-color: rgba(21, 21, 21, 0.7);
+  margin-top: 0;
+  overflow: hidden
+}
+
+.generalText {
+  color: white;
+  margin: 0 0 0 5px;
+}
+
+.name {
+  color: white;
+  padding: 0 10px 10px 5px;
+  margin-bottom: 0px;
+  font-size: 20px;
+}
+
+.goto {
+  cursor: pointer;
+}
+
+.mainContent {
+  float: left;
+  width: 50%;
+  height: 100%
+}
+
+.rating {
+  width: 20%;
+  height: 100%;
+  float: right;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+.pictureDiv {
+  width: 30%;
+  height: 100%;
+  float: left;
+}
+
+.topHalf {
+  width: 100%;
+  height: 150px;
+  display: block;
+  background-color: rgba(21, 21, 21, 0.7);
+  z-index: 1001;
+  overflow: hidden;
+}
+
+.removable {
+  width: 100%;
+  height: 150px;
+  margin: 20px 10px 20px 0;
+  cursor: pointer;
+}
+
+.ratingText {
+  color: white;
+  padding: 5px 10px 0 0;
+  font-size: 40px;
+  margin-top: 0;
+}
+
+.hideContent {
+  display: none;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Google Maps API Now With Directions </title>
+  
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  <head>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcug7G6fbEj97_DsceCg-C2xaSusDO0-g&libraries=places"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw=="
+  crossorigin="anonymous">
+  <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Kanit' rel='stylesheet' type='text/css'>
+</head>
+
+<body style="width:100vw; height:100vh; background-color:#212121;display: inline-block; color:lightgrey; overflow:hidden">
+  <a id="nav-toggle" href="#" class="active" style="z-index:1000; margin:10px;"><span></span></a>
+  <div id="searchDD">
+    <h1 style="left:25%; color:white;margin: auto;width: 25%; font-family:Kanit;" class="hidable">Search</h1>
+    <div id="type-container" class="form-group hidable" style="height:35px; margin:30px 30px 0 30px;">
+      <i class="fa fa-chevron-left hidable carousel-nav"  href="#typecarousel" role="button" data-slide="prev"></i>
+      <div style="width:90%;float:left; margin:0;" id="typecarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+        <div class="carousel-inner" role="listbox">
+          <div class="item active">
+            <div class="types" type="lodging">Hotels</div>
+            <div class="types activeType" type="restaurant">Restaurants</div>
+            <div class="types" type="cafe">Cafes</div>
+            <div class="types" type="transit_station">Transit</div>
+            <div class="types" type="parking">Parking</div>
+          </div>
+          <div class="item ">
+            <div class="types" type="bank">Bank</div>
+            <div class="types" type="bar">Bar</div>
+            <div class="types" type="car_rental">Car Rental</div>
+            <div class="types" type="clothing_store">Clothing</div>
+            <div class="types" type="convenience_store">Mini Mart</div>
+          </div>
+          <div class="item ">
+            <div class="types" type="gas_station">Gas Station</div>
+            <div class="types" type="gym">Gym</div>
+            <div class="types" type="hospital">Hospital</div>
+            <div class="types" type="movie_theater">Theater</div>
+            <div class="types" type="shopping_mall">Mall</div>
+          </div>
+          <div class="item ">
+            <div class="types" type="university">University</div>
+            <div class="types" type="food">Food</div>
+            <div class="types" type="doctor">Doctor</div>
+            <div class="types" type="church">Church</div>
+            <div class="types" type="campground">Campground</div>
+          </div>
+        </div>
+      </div>
+        <i class="fa fa-chevron-right hidable carousel-nav"  href="#typecarousel" role="button" data-slide="next"></i>
+      </div>
+      <div class="form-group hidable" style="margin:0 30px;">
+        <div class="input-group">
+          <span class="input-group-btn">
+            <button class="btn thePerfectTeal" id="submit" onclick="get_loc();" type="button" id="submit">Search</button>
+          </span>
+          <input type="text" class="form-control" id="user_loc">
+        </div>
+      </div>
+      <!--Form Group-->
+      <div class="divider hidable"></div>
+      <div id="links" class="hidable">
+
+      </div>
+    </div>
+    <!-- SearchDD-->
+    <div id="mapPanel">
+      <div id="map"></div>
+    </div>
+    <!-- mapPanel -->
+</body>
+  
+    <script  src="js/index.js"></script>
+
+</body>
+</html>
