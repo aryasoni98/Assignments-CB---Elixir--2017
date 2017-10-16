@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Weather App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  <div id="app">
+	
+<div v-bind:class="weatherName + '-weather overlayBg'"></div>
+	
+<div class="time-container">
+	<div class="time-center">
+		<div class="display-time">
+			{{ currentTime }}
+		</div>
+	</div>
+	<main class="container">
+		<div class="settingsBar">
+			<div class="type-city">
+				<label for="nameOfCity">Type city name: </label>
+				<input id="nameOfCity" type="text" v-model="currentCity"/>				
+			</div>
+			<div class="settingsBtns">
+				<div class="toggleTempUnit">
+				<input type="checkbox" id="celFar"
+							 @click="switchTempUnit"/>
+				<label for="celFar" class="toggleCF">
+					<span class="toggleHandler"></span>
+				</label>
+				</div>
+				<div class="refreshWrap">
+					<button class="refresh" @click="refreshWeather"></button>
+				</div>				
+			</div>
+		</div>
+		
+		<div class="weatherContainer">
+			<div class="columnFlex">
+				<span class="cityName">{{cityName}}</span>
+				<span class="display-date">{{ currentDate }}</span>
+			</div>
+			
+			<div class="innerWeather">
+				<span class="weatherType">{{weatherInfo}}</span>
+				<span class="weatherTemp">{{ temp}}°{{unit}}</span>
+			</div>
+		</div>
+	</main>
+
+</div>
+</div>
+  <script src='https://unpkg.com/vue@2.3.3/dist/vue.min.js'></script>
+<script src='https://momentjs.com/downloads/moment.min.js'></script>
+<script src='https://unpkg.com/vue-resource@1.2.1/dist/vue-resource.min.js'></script>
+
+    <script  src="js/index.js"></script>
+
+</body>
+</html>

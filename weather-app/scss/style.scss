@@ -1,0 +1,310 @@
+/* The version of Bourbon used in this Pen was 4.* */
+@import "bourbon";
+$main-color: #f50057;
+$second-color: #3C3C3C;
+$bg-color: #212121;
+
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	&:before, &:after { box-sizing: inherit; }
+}
+
+body{
+	line-height: 1.5;
+	font-family:  'Raleway', 'Open Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+	color: #fff;
+}
+
+.overlayBg{
+  position:fixed;
+  width:100%;
+  height:100%;
+  z-index: -1;
+  //filter: blur(1px);
+  transition: all 1s ease;
+}
+
+.time-container{
+	position: relative;
+	margin: 0 auto;
+	padding: 1rem;
+	height: 100vh;
+	width: 1000px;
+	@media screen and (max-width: 39.9375em){
+		width: auto;
+	}
+	.time-center{
+		text-align:center;
+		margin: 0 auto;
+		.display-time{
+			font-size: 4rem;
+			font-family: 'Roboto';
+			font-weight: 800;
+			margin: 0 auto;
+			width: 300px;
+			vertical-align: middle;
+			color: #fff;
+			background-color: rgba(0,0,0,.5);
+			box-shadow: 0 0 4px 1px rgba(0,0,0,.5);
+		}
+	}
+}
+.container{
+	margin: 1rem auto;
+	width: 35rem;
+	box-shadow: 0 0 5px rgba(0,0,0,0.5);	
+	@media screen and (max-width: 39.9375em){
+		width: 100%;
+	}
+}
+.settingsBar{
+	position: relative;
+	width: 100%;
+	height: 3.25rem;
+	background: $second-color;
+	line-height: 3.25rem;
+	padding: 0 1rem;
+	@media screen and (max-width: 39.9375em){
+		height: auto;
+	}
+	.type-city{
+		float: left;
+		>label{
+			color: #eee;
+		}
+		> input{
+			margin-right: 1rem;
+			background: transparent;
+			color: #eee;
+			font-size: 20px;
+			padding: 2px;
+			width: 150px;
+			border-width: 0 0 1px 0;
+			transition: 0.4s ease border-color;
+			&:focus{
+				outline: none;
+				border-color: $main-color;
+			}
+		}
+	}
+	.settingsBtns{
+		display: inline;
+	}
+}
+.weatherContainer{
+	line-height: 1.5;
+	//height: 16rem;
+	display: flex;
+	flex-flow: column nowrap;
+	padding: 1rem 1rem;
+	background: rgba(0,0,0,.40);
+	color: #fff;
+	box-shadow: inset 0px 5px 3px -3px rgba(0, 0, 0, 0.4);
+	@media screen and (max-width: 39.9375em){
+		height: auto;
+	}
+	.cityName{
+		width: 100%;
+		font-size: 2.5rem;
+		flex:1;
+	}
+	.display-date{
+		font-size: .875rem;
+		margin: 4px 0 0;
+	}
+}
+	.innerWeather{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+		padding: 0 10px;
+		@media screen and (max-width: 39.9375em){
+			flex-direction: column;
+			justify-content: center;
+			text-align: center;
+		}
+	.weatherType{
+		align-self: flex-start;
+		font-size: 2.25rem;
+		font-style: italic;
+		margin-top: 1rem;
+		margin-right: .5rem;
+		@media screen and (max-width: 39.9375em){
+			align-self:center;
+		}
+	}
+	.weatherTemp{
+		position: relative;
+		font-size: 3.5rem;
+	}
+	.weatherIcon{
+		color: $bg-color;
+		@media screen and (max-width: 39.9375em){
+			margin: 2rem 0 2.5rem;
+		}
+		>.icon{
+			height: 6em;
+		}
+	}
+}
+
+.columnFlex{
+	display: flex;
+	flex-flow: column nowrap;
+	@media screen and (max-width: 39.9375em){
+		margin-bottom: 1rem;
+	}
+}
+
+.toggleTempUnit{
+	vertical-align: middle;
+	display: inline-block;
+	input[type="checkbox"] {
+		display: none;
+	}
+	.toggleCF{
+		position: relative;
+		display: block;
+		cursor: pointer;
+		margin-left: 3rem;
+		width: 3rem;
+		height: 1rem;
+		border-radius: 10px;
+		background-color: #616161;
+		font-weight: bold;
+		&:after{
+			content: '°C';
+			position: absolute;
+			bottom: -1.125rem;
+			left: -1.875rem;
+			font-size: 20px;
+			color: $main-color;
+			transition: color 0.5s ease;
+		}
+		&:before{
+			content: '°F';
+			position: absolute;
+			top: -1.125rem;
+			right: -1.7rem;
+			font-size: 20px;
+			color: #999;
+			transition: color 0.5s ease;
+		}
+	}
+	
+	.toggleHandler{
+		display: block;
+		position: relative;
+		width: 1.5rem;
+		height: 1.5rem;
+		top: -4px;
+ 		left: -3px;
+		border-radius: 50%;
+		background-color: $main-color;
+		box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+		transition: all 0.3s ease-in-out;
+	}
+	
+	input:checked{
+		+ .toggleCF{
+			&:after{
+				color: #999;
+			}
+			&:before{
+				color: $main-color;
+			}
+			
+			.toggleHandler{
+				left: 1.5rem;
+			}
+		}
+	}
+}
+
+@keyframes refreshAnimation {
+	0%{
+		transform: rotateZ(135deg);
+	}
+	100%{	
+		transform: rotateZ(500deg);
+	}
+}
+
+.refreshWrap{
+	position: relative;
+	float: right;
+	.refresh{
+		position: relative;
+		cursor: pointer;
+		float: right;
+		margin-top: 10px;
+		border: 3px solid $main-color;
+		border-radius: 50%;
+		width: 2rem;
+		height: 2rem;
+		background: $second-color;
+		transform: rotateZ(135deg);
+		outline: none;
+		&::-moz-focus-inner {
+  		border: 0;
+		}
+		&:before {
+			content: '';
+			position: absolute;
+			top: 1px;
+			right: -1px;
+			display: block;
+			width: 6px;
+			height: 7px;
+			background-color: $second-color;
+			transform: rotateZ(-45deg);
+		}
+		&:after{
+			content: '';
+			position: absolute;
+			border-bottom: .45rem solid transparent;
+			border-left: .45rem solid $main-color;
+			border-top: .45rem solid transparent;
+			top: -5px;
+			left: -15px;
+			margin-left: 32px;
+			margin-top: -2px;
+		}
+		&:hover{
+			animation: refreshAnimation .8s ease;
+		}
+	}
+}
+.cloudy-weather{
+  background: url('//c1.staticflickr.com/4/3711/9780760046_4cc4a6dab8_h.jpg') no-repeat;
+	background-size: cover;
+}
+.sunny-weather, .clear-weather{
+  background: url('//s-media-cache-ak0.pinimg.com/originals/62/c5/9a/62c59a962359ce081937da1344688fb5.jpg') no-repeat;
+	background-size: cover;
+}
+.haze-weather, .fog-weather{
+	background: url('//cdn.shutterstock.com/shutterstock/videos/3991543/thumb/1.jpg') no-repeat;
+	background-size: cover;
+}
+.rain-weather, .overcast-weather{
+	background: url('//pbs.twimg.com/media/DDFbYiNVoAIKnzs.jpg') no-repeat;
+	background-size: cover;
+}
+.mist-weather{
+	background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Trees_in_the_mist_%287699564540%29.jpg/1280px-Trees_in_the_mist_%287699564540%29.jpg') no-repeat;
+	background-size: cover;
+}
+.snow-weather{
+	background: url('//s27.postimg.org/b2nic0f9d/snow-05.jpg');
+	background-size: cover;
+}
+.drizzle-weather{
+	background: url('//images.unsplash.com/photo-1418118292097-998e6a14af3a?dpr=1&auto=format&crop=entropy&fit=crop&w=1500&h=996&q=80&cs=tinysrgb');
+	background-size: cover;
+}
